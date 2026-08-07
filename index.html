@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Renascer Profissional</title>
+    <!-- Link para o arquivo de estilos externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero">
+        <h1>Você não precisa carregar o mundo inteiro sozinha.</h1>
+        <p>Um espaço seguro de acolhimento e resgate profissional para mães solo.</p>
+        <a href="#" class="btn">Quero dar o primeiro passo</a>
+    </header>
+
+    <section class="container-sec">
+        <h2 class="section-title">Você se identifica com isso?</h2>
+        <ul class="identificacao-lista">
+            <li><strong>O Peso da Sobrecarga:</strong> A exaustão de tentar dar conta de tudo sozinha.</li>
+            <li><strong>A Culpa Materna:</strong> O aperto no coração por buscar tempo para si mesma.</li>
+            <li><strong>A Identidade Perdida:</strong> A sensação de que sua faceta profissional ficou apagada.</li>
+        </ul>
+    </section>
+
+    <!-- Seção: Quiz Interativo -->
+    <section class="container-sec quiz-bg">
+        <h2 class="section-title">Descubra seu momento atual</h2>
+        <p class="quiz-subtitle">Qual destas situações mais pesa na sua rotina hoje?</p>
+        
+        <div class="quiz-container">
+            <button class="quiz-card" onclick="mostrarResultado(1)">
+                <strong>1. Sobrecarga:</strong> Sinto que estou sempre apagando incêndios e sem tempo para mim.
+            </button>
+            <button class="quiz-card" onclick="mostrarResultado(2)">
+                <strong>2. Recomeço:</strong> Quero voltar a trabalhar ou crescer profissionalmente, mas não sei por onde começar.
+            </button>
+            <button class="quiz-card" onclick="mostrarResultado(3)">
+                <strong>3. Culpa:</strong> Sinto uma culpa constante por tentar equilibrar maternidade e carreira.
+            </button>
+
+            <!-- Caixa de Resultado Dinâmica -->
+            <div id="quiz-result">
+                <h3>Nós entendemos exatamente o que você sente.</h3>
+                <p id="result-text"></p>
+                <a href="#" class="btn btn-result">Quero mudar essa realidade juntas</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: A Virada de Chave -->
+    <section class="container-sec">
+        <div class="quiz-container">
+            <div class="quiz-card highlight-card">
+                <h2>Existe um caminho de volta para você.</h2>
+                <p>
+                    A maternidade não apagou a sua força, ela apenas transformou você. O nosso propósito é te ajudar a olhar para dentro, curar os pesos do passado e redescobrir o seu potencial profissional.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Pilares -->
+    <section class="container-sec quiz-bg">
+        <h2 class="section-title">Como vamos trilhar esse caminho?</h2>
+        <div class="quiz-container">
+            <div class="quiz-card static-card">
+                <h3>Mapeamento de Raízes</h3>
+                <p>Identificar padrões emocionais que te travam hoje.</p>
+            </div>
+            <div class="quiz-card static-card">
+                <h3>Resgate de Talentos</h3>
+                <p>Somar suas experiências antigas com a força da maternidade.</p>
+            </div>
+            <div class="quiz-card static-card">
+                <h3>Plano de Ação</h3>
+                <p>Passos práticos para sua autonomia, no seu ritmo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Chamada Final -->
+    <section class="final-cta">
+        <h2>Você não precisa caminhar sozinha.</h2>
+        <p>Estamos prontas para te acolher. Vamos juntas?</p>
+        <a href="#" class="btn btn-orange">Quero fazer parte do grupo</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Projeto Renascer Profissional - Desenvolvido com propósito e tecnologia.</p>
+    </footer>
+
+    <!-- Link para o arquivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>

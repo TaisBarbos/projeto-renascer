@@ -1,0 +1,217 @@
+/* --- RESET E ESTIDOLOS GERAIS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+/* --- HERO (TOPO) --- */
+.hero {
+    background: linear-gradient(135deg, #2980b9, #2c3e50);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero p {
+    font-size: 1.1em;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+/* --- BOTÕES --- */
+.btn {
+    display: inline-block;
+    background-color: #e67e22;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #d35400;
+    transform: translateY(-2px);
+}
+
+/* --- SEÇÕES PADRÃO --- */
+.container-sec {
+    padding: 60px 20px;
+}
+
+.quiz-bg {
+    background-color: #f4f6f7;
+}
+
+.section-title {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+/* Lista de dores inicial */
+.identificacao-lista {
+    max-width: 700px;
+    margin: 0 auto;
+    list-style: none;
+}
+
+.identificacao-lista li {
+    background: #fff;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-left: 4px solid #2980b9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* --- COMPONENTES DOS CARDS E QUIZ --- */
+.quiz-container {
+    max-width: 700px;
+    margin: auto;
+}
+
+.quiz-subtitle {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.quiz-card {
+    background: #fff;
+    padding: 18px 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+    width: 100%;
+    font-size: 1em;
+    color: #333;
+    font-family: inherit;
+    border: none;
+    border-left: 4px solid #2980b9;
+}
+
+.quiz-card:hover {
+    background: #fbfaf7;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+}
+
+.highlight-card {
+    cursor: default;
+    background: #fdfbf7;
+    padding: 30px;
+}
+
+.highlight-card h2 {
+    color: #2980b9;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+}
+
+.static-card {
+    cursor: default;
+}
+
+.static-card h3 {
+    color: #2980b9;
+    margin-bottom: 5px;
+}
+
+/* --- CAIXA DE RESULTADO DO QUIZ --- */
+#quiz-result {
+    margin-top: 20px;
+    padding: 25px;
+    background: #fff;
+    border-left: 4px solid #2980b9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    display: none;
+}
+
+#quiz-result h3 {
+    color: #2980b9;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#result-text {
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.btn-result {
+    background: #2980b9;
+    padding: 10px 20px;
+    font-size: 0.95em;
+}
+
+.btn-result:hover {
+    background: #1f618d;
+}
+
+/* --- CHAMADA FINAL E FOOTER --- */
+.final-cta {
+    text-align: center;
+    padding: 70px 20px;
+    background: #2980b9;
+    color: white;
+}
+
+.final-cta h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.final-cta p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.btn-orange {
+    background: #e67e22;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #1a252f;
+    color: #bdc3c7;
+    font-size: 0.9em;
+}
+
+/* --- RESPONSIVIDADE (MEDIA QUERIES PARA CELULAR) --- */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 1.7em;
+    }
+    
+    .section-title {
+        font-size: 1.5em;
+    }
+
+    .container-sec {
+        padding: 40px 15px;
+    }
+}
