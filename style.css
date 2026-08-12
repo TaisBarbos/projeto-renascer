@@ -1,4 +1,4 @@
-/* --- RESET E ESTIDOLOS GERAIS --- */
+/* --- RESET E ESTILOS GERAIS --- */
 * {
     margin: 0;
     padding: 0;
@@ -49,6 +49,44 @@ body {
 .btn:hover {
     background-color: #d35400;
     transform: translateY(-2px);
+}
+
+/* --- SEÇÃO BANNER COM PÔR DO SOL E VERSÍCULO --- */
+.banner-renascer {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('img/fundo-projeto.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.verse-card {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(6px);
+    padding: 30px 25px;
+    border-radius: 12px;
+    max-width: 650px;
+    text-align: center;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.verse-text {
+    font-size: 1.2em;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.verse-reference {
+    font-size: 1em;
+    font-weight: bold;
+    color: #f39c12; /* Tom dourado combinando com o pôr do sol */
 }
 
 /* --- SEÇÕES PADRÃO --- */
@@ -213,5 +251,18 @@ footer {
 
     .container-sec {
         padding: 40px 15px;
+    }
+
+    .banner-renascer {
+        min-height: 320px;
+        padding: 20px 15px;
+    }
+
+    .verse-card {
+        padding: 20px 15px;
+    }
+
+    .verse-text {
+        font-size: 1.05em;
     }
 }
