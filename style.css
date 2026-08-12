@@ -86,7 +86,7 @@ body {
 .verse-reference {
     font-size: 1em;
     font-weight: bold;
-    color: #f39c12; /* Tom dourado combinando com o pôr do sol */
+    color: #f39c12;
 }
 
 /* --- SEÇÕES PADRÃO --- */
@@ -265,21 +265,9 @@ footer {
     .verse-text {
         font-size: 1.05em;
     }
-}
-/* Ajustes para o Seletor de Jornada */
-.quiz-card strong {
-    display: block;
-    font-size: 1.1em;
-    color: #2980b9;
-    margin-bottom: 6px;
-}
 
-.quiz-card p {
-    font-size: 0.95em;
-    color: #555;
-    margin: 0;
-}
-
-.quiz-card:hover strong {
-    color: #1f618d;
+    .quiz-card {
+        padding: 16px;
+        margin-bottom: 12px;
+    }
 }
