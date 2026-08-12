@@ -150,6 +150,17 @@ body {
     border-left: 4px solid #2980b9;
 }
 
+.quiz-card strong {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.05em;
+}
+
+.quiz-card p {
+    color: #555;
+    font-size: 0.95em;
+}
+
 .quiz-card:hover {
     background: #fbfaf7;
     transform: translateY(-2px);
