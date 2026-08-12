@@ -1,5 +1,6 @@
 /**
  * Lógica do Seletor de Jornada - Projeto Renascer
+ * Exibe dinamicamente as orientações personalizadas no quiz.
  */
 function selecionarJornada(tipo) {
     const resultadoDiv = document.getElementById('quiz-result');
