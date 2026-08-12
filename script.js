@@ -1,26 +1,31 @@
 /**
- * Lógica do Quiz Interativo - Projeto Renascer
- * Exibe dinamicamente a mensagem de acolhimento baseada na opção escolhida.
+ * Lógica do Seletor de Jornada - Projeto Renascer
  */
-function mostrarResultado(opcao) {
+function selecionarJornada(tipo) {
     const resultadoDiv = document.getElementById('quiz-result');
+    const tituloH3 = document.getElementById('jornada-titulo');
     const textoP = document.getElementById('result-text');
-    
-    // Mapeamento das mensagens por opção do quiz
-    const mensagens = {
-        1: "A sobrecarga consome nossa energia, mas você não precisa carregar o mundo inteiro sozinha. Existe um jeito de organizar a rotina abrindo espaço para você.",
-        2: "O recomeço profissional pode parecer distante, mas suas habilidades anteriores e a força que você ganhou sendo mãe são uma combinação poderosa. Vamos estruturar isso juntas!",
-        3: "A culpa materna é um peso injusto que colocaram sobre nós. O primeiro passo aqui é resgatar a sua identidade sem culpa."
+
+    const conteudos = {
+        'rotina': {
+            titulo: "🌱 Seu foco agora: Organização & Autocuidado",
+            texto: "A sobrecarga consome sua energia. Nosso primeiro passo será mapear sua rotina para criar pequenos respiros diários, permitindo que você cuide de si sem carregar o peso do mundo sozinha."
+        },
+        'recomeco': {
+            titulo: "🚀 Seu foco agora: Posicionamento & Oportunidades",
+            texto: "O mercado mudou, mas você também mudou e ganhou novas habilidades valiosas. Vamos estruturar seu currículo, portfólio e rede de contatos para você voltar com confiança."
+        },
+        'autonomia': {
+            titulo: "✨ Seu foco agora: Resgate de Identidade & Metas",
+            texto: "A maternidade transforma, não apaga quem você é. Vamos identificar seus talentos, alinhar seus objetivos pessoais e traçar um plano de ação prático no seu próprio ritmo."
+        }
     };
 
-    // Atualiza o texto apenas se a opção existir
-    if (mensagens[opcao]) {
-        textoP.innerText = mensagens[opcao];
+    if (conteudos[tipo]) {
+        tituloH3.innerText = conteudos[tipo].titulo;
+        textoP.innerText = conteudos[tipo].texto;
         
-        // Exibe o card de resultado
         resultadoDiv.style.display = 'block';
-        
-        // Rola suavemente até o resultado para focar a atenção do usuário
         resultadoDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
 }
