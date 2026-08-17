@@ -40,27 +40,30 @@ h1, h2, h3 {
     font-weight: 600;
 }
 
-/* HEADER / HERO */
+/* HEADER / HERO COM IMAGEM DE FUNDO */
 .hero {
-    padding: 100px 0 80px;
+    padding: 120px 0 100px;
     text-align: center;
-    background: linear-gradient(180deg, #EFECE4 0%, var(--bg-main) 100%);
+    background: linear-gradient(rgba(30, 41, 35, 0.85), rgba(30, 41, 35, 0.90)), url('img/fundo-projeto.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #FFFFFF;
     border-bottom: 1px solid var(--border-color);
 }
 
-.badge {
+.hero .badge {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background-color: #FFFFFF;
-    color: var(--primary);
     padding: 8px 20px;
     border-radius: 50px;
     font-size: 0.85rem;
     font-weight: 600;
     margin-bottom: 24px;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
 }
 
 .badge-dot {
@@ -72,7 +75,7 @@ h1, h2, h3 {
 
 .hero h1 {
     font-size: clamp(2.5rem, 5vw, 3.8rem);
-    color: var(--primary);
+    color: #FFFFFF;
     margin-bottom: 20px;
     line-height: 1.15;
     max-width: 900px;
@@ -80,9 +83,9 @@ h1, h2, h3 {
     margin-right: auto;
 }
 
-.subtitle {
+.hero .subtitle {
     font-size: 1.15rem;
-    color: var(--text-muted);
+    color: #E2DBD0;
     max-width: 680px;
     margin: 0 auto 40px;
     font-weight: 400;

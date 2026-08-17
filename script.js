@@ -1,33 +1,45 @@
+// Dados para as respostas do diagnóstico
+const diagnoses = {
+    exaustao: {
+        title: "Você está no Ciclo do Incêndio",
+        text: "Sua energia está sendo drenada pela urgência do agora. O primeiro passo aqui não é produzir mais, é aprender a pausar para sobreviver e depois prosperar."
+    },
+    recomeco: {
+        title: "Você busca o seu Gatilho de Recomeço",
+        text: "O desejo de crescer é a semente. Vamos trabalhar para traduzir o que você vive hoje em competências profissionais valorizadas pelo mercado."
+    },
+    culpa: {
+        title: "Você está enfrentando o Tribunal da Culpa",
+        text: "A culpa é o sinal de que você se importa. Vamos ressignificar isso, separando a mulher profissional da 'mãe perfeita' que não existe."
+    }
+};
+
+// Função para mostrar o diagnóstico
+function showDiagnosis(type) {
+    const resultBox = document.getElementById('diagnosis-result');
+    const title = document.getElementById('result-title');
+    const text = document.getElementById('result-text');
+    
+    // Atualiza o texto com base no tipo escolhido
+    title.innerText = diagnoses[type].title;
+    text.innerText = diagnoses[type].text;
+    
+    // Remove a classe 'hidden' para mostrar a caixa
+    resultBox.classList.remove('hidden');
+    
+    // Opcional: faz a página rolar suavemente até o resultado
+    resultBox.scrollIntoView({ behavior: 'smooth' });
+}
+
+// Função para capturar o formulário
 function handleLeadSubmit(event) {
-    event.preventDefault(); // Evita o recarregamento da página
+    event.preventDefault(); // Impede a página de recarregar
     
-    // Pega os valores digitados nos inputs
-    const inputs = document.querySelectorAll('.lead-form input');
-    const nome = inputs[0].value;
-    const whatsapp = inputs[1].value;
-    
-    // Pega o título do diagnóstico que ela selecionou
-    const focoAtual = document.getElementById('result-title').textContent;
-
-    // Número do seu WhatsApp (coloque o seu DDD e número aqui, ex: 5575999999999)
-    const meuNumeroWhatsApp = "5575999999999"; 
-
-    // Cria a mensagem personalizada
-    const mensagem = `Olá! Meu nome é ${nome}, meu WhatsApp é ${whatsapp}. Fiz o teste no Projeto Renascer e ${focoAtual}. Quero dar esse passo com apoio!`;
-    
-    // Codifica a mensagem para o formato de link do WhatsApp
-    const mensagemCodificada = encodeURIComponent(mensagem);
-    const urlWhatsApp = `https://api.whatsapp.com/send?phone=${meuNumeroWhatsApp}&text=${mensagemCodificada}`;
-
-    // Mostra a mensagem de sucesso na tela e abre o WhatsApp em seguida
-    const form = document.querySelector('.lead-form');
     const successMsg = document.getElementById('form-success');
-
-    form.classList.add('hidden');
     successMsg.classList.remove('hidden');
-
-    // Abre o WhatsApp após 1.5 segundos para dar tempo de ver a tela de sucesso
-    setTimeout(() => {
-        window.open(urlWhatsApp, '_blank');
-    }, 1500);
+    
+    // Esconde o formulário após sucesso
+    event.target.style.display = 'none';
+    
+    console.log("Lead capturado!");
 }
