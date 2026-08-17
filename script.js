@@ -1,24 +1,33 @@
-function selecionarJornada(tipo) {
-    const resultBox = document.getElementById('quiz-result');
-    const titulo = document.getElementById('jornada-titulo');
-    const texto = document.getElementById('result-text');
+function handleLeadSubmit(event) {
+    event.preventDefault(); // Evita o recarregamento da página
+    
+    // Pega os valores digitados nos inputs
+    const inputs = document.querySelectorAll('.lead-form input');
+    const nome = inputs[0].value;
+    const whatsapp = inputs[1].value;
+    
+    // Pega o título do diagnóstico que ela selecionou
+    const focoAtual = document.getElementById('result-title').textContent;
 
-    if (!resultBox || !titulo || !texto) return;
+    // Número do seu WhatsApp (coloque o seu DDD e número aqui, ex: 5575999999999)
+    const meuNumeroWhatsApp = "5575999999999"; 
 
-    if (tipo === 'rotina') {
-        titulo.innerText = "🌱 Jornada Respiro & Rotina";
-        texto.innerText = "A sobrecarga constante não é um destino inevitável. O seu primeiro passo é reorganizar sua rotina sem culpa, estabelecendo limites saudáveis e criando pequenos momentos de alívio e autocuidado no seu dia a dia.";
-    } else if (tipo === 'recomeco') {
-        titulo.innerText = "🚀 Jornada Recomeço Profissional";
-        texto.innerText = "Sua bagagem e experiências têm um valor enorme. O seu primeiro passo é resgatar suas competências, alinhar seus objetivos e estruturar uma estratégia clara para voltar ao mercado ou evoluir na sua carreira.";
-    } else if (tipo === 'autonomia') {
-        titulo.innerText = "✨ Jornada Autonomia & Propósito";
-        texto.innerText = "A culpa e a dúvida sobre o equilíbrio entre maternidade e ambição pessoal são reais, mas você não precisa escolher entre uma coisa e outra. O seu primeiro passo é resgatar a sua identidade e construir projetos com leveza e clareza.";
-    }
+    // Cria a mensagem personalizada
+    const mensagem = `Olá! Meu nome é ${nome}, meu WhatsApp é ${whatsapp}. Fiz o teste no Projeto Renascer e ${focoAtual}. Quero dar esse passo com apoio!`;
+    
+    // Codifica a mensagem para o formato de link do WhatsApp
+    const mensagemCodificada = encodeURIComponent(mensagem);
+    const urlWhatsApp = `https://api.whatsapp.com/send?phone=${meuNumeroWhatsApp}&text=${mensagemCodificada}`;
 
-    // Exibe a caixa de resultado
-    resultBox.style.display = 'block';
+    // Mostra a mensagem de sucesso na tela e abre o WhatsApp em seguida
+    const form = document.querySelector('.lead-form');
+    const successMsg = document.getElementById('form-success');
 
-    // Rola suavemente até o resultado para que o usuário veja a resposta
-    resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    form.classList.add('hidden');
+    successMsg.classList.remove('hidden');
+
+    // Abre o WhatsApp após 1.5 segundos para dar tempo de ver a tela de sucesso
+    setTimeout(() => {
+        window.open(urlWhatsApp, '_blank');
+    }, 1500);
 }

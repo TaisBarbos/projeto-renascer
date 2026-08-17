@@ -1,29 +1,177 @@
-<!-- Seção: Seletor de Jornada -->
-<section class="container-sec quiz-bg">
-    <h2 class="section-title">Escolha a sua jornada atual</h2>
-    <p class="quiz-subtitle">Clique no momento que mais representa o seu desafio de hoje:</p>
-    
-    <div class="quiz-container">
-        <button class="quiz-card" onclick="selecionarJornada('rotina')">
-            <strong>🌱 Jornada Respiro & Rotina</strong>
-            <p>Sinto que estou sempre apagando incêndios e preciso reorganizar meu tempo sem culpa.</p>
-        </button>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resgate Profissional | Ecossistema Mães Solo</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
 
-        <button class="quiz-card" onclick="selecionarJornada('recomeco')">
-            <strong>🚀 Jornada Recomeço Profissional</strong>
-            <p>Quero voltar a trabalhar ou crescer na minha carreira, mas não sei por onde começar.</p>
-        </button>
-
-        <button class="quiz-card" onclick="selecionarJornada('autonomia')">
-            <strong>✨ Jornada Autonomia & Propósito</strong>
-            <p>Quero resgatar minha identidade além da maternidade e construir meus próprios projetos.</p>
-        </button>
-
-        <!-- Painel de Destino da Jornada -->
-        <div id="quiz-result">
-            <h3 id="jornada-titulo">Sua jornada começa aqui</h3>
-            <p id="result-text"></p>
-            <a href="#" class="btn btn-result">Quero dar esse passo na minha jornada</a>
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <div class="container hero-container">
+            <div class="badge">
+                <span class="badge-dot"></span> Rede de Apoio & Reinvenção Profissional
+            </div>
+            <h1>Você não precisa carregar o mundo inteiro sozinha.</h1>
+            <p class="subtitle">Um ecossistema seguro de acolhimento e resgate profissional para mães que decidiram não abrir mão de si mesmas.</p>
+            <div class="hero-actions">
+                <a href="#diagnostico" class="btn btn-primary">Quero dar o primeiro respiro</a>
+            </div>
         </div>
-    </div>
-</section>
+    </header>
+
+    <!-- SEÇÃO O ESPELHO -->
+    <section class="pain-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Você se reconhece em alguma destas cenas?</h2>
+                <p>O primeiro passo para a mudança é nomear aquilo que drena sua energia todos os dias.</p>
+            </div>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon-wrapper">🔥</div>
+                    <h3>O Ciclo do Incêndio</h3>
+                    <p>Acordar já planejando como apagar os fogos do dia, sem sobrar 15 minutos para respirar ou pensar no próprio futuro.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon-wrapper">⚖️</div>
+                    <h3>O Tribunal da Culpa</h3>
+                    <p>Sentir um aperto no peito toda vez que o foco se volta para uma ambição pessoal, profissional ou um momento de autocuidado.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon-wrapper">🪞</div>
+                    <h3>A "Invisibilidade"</h3>
+                    <p>Olhar para o currículo e sentir que a mulher profissional foi soterrada pela rotina e pelas demandas da maternidade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIAGNÓSTICO INTERATIVO -->
+    <section id="diagnostico" class="quiz-section">
+        <div class="container quiz-container">
+            <div class="section-header">
+                <h2>Onde o sapato aperta mais hoje?</h2>
+                <p class="section-desc">Selecione o que mais consome sua energia neste momento:</p>
+            </div>
+            
+            <div class="quiz-options">
+                <button class="quiz-btn" onclick="showDiagnosis('exaustao')">
+                    <div class="quiz-num">01</div>
+                    <div class="quiz-content">
+                        <strong>Exaustão Crônica</strong>
+                        <span>Sinto que estou sempre apagando incêndios e sem tempo para mim.</span>
+                    </div>
+                </button>
+                <button class="quiz-btn" onclick="showDiagnosis('recomeco')">
+                    <div class="quiz-num">02</div>
+                    <div class="quiz-content">
+                        <strong>Gatilho de Recomeço</strong>
+                        <span>Quero voltar a trabalhar ou crescer, mas não sei por onde começar.</span>
+                    </div>
+                </button>
+                <button class="quiz-btn" onclick="showDiagnosis('culpa')">
+                    <div class="quiz-num">03</div>
+                    <div class="quiz-content">
+                        <strong>Síndrome da Impostora & Culpa</strong>
+                        <span>Sinto uma culpa constante por tentar equilibrar maternidade e carreira.</span>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Caixa de Resposta Dinâmica com Captura -->
+            <div id="diagnosis-result" class="diagnosis-box hidden">
+                <h3 id="result-title"></h3>
+                <p id="result-text"></p>
+                
+                <!-- Formulário de Acolhimento Integrado -->
+                <form class="lead-form" onsubmit="handleLeadSubmit(event)">
+                    <p class="form-instruction">Quer receber o direcionamento prático para este momento no seu WhatsApp?</p>
+                    <div class="form-inputs-group">
+                        <input type="text" placeholder="Seu primeiro nome" required>
+                        <input type="tel" placeholder="Seu WhatsApp (com DDD)" required>
+                    </div>
+                    <button type="submit" class="btn btn-accent">Quero dar esse passo com apoio</button>
+                </form>
+                <div id="form-success" class="form-success hidden">
+                    ✨ Perfeito! Você deu o primeiro passo. Em breve entraremos em contato com você de forma acolhedora.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- O MÉTODO -->
+    <section class="method-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Como vamos trilhar esse caminho?</h2>
+                <p>Uma metodologia estruturada para unir clareza mental e autonomia profissional.</p>
+            </div>
+            <div class="method-grid">
+                <div class="method-step">
+                    <span class="step-number">01</span>
+                    <h3>Descompressão de Raízes</h3>
+                    <p>Identificação e eliminação dos padrões emocionais e da culpa que drenam sua energia diária.</p>
+                </div>
+                <div class="method-step">
+                    <span class="step-number">02</span>
+                    <h3>Tradução de Competências</h3>
+                    <p>Transformamos sua resiliência, multitarefa e gestão de crises da maternidade em soft/hard skills corporativas.</p>
+                </div>
+                <div class="method-step">
+                    <span class="step-number">03</span>
+                    <h3>Plano de Autonomia Ágil</h3>
+                    <p>Um plano de ação desenhado sob medida para a sua realidade de tempo, construído no seu ritmo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MANIFESTO DE SEGURANÇA -->
+    <section class="manifesto-section">
+        <div class="container">
+            <div class="manifesto-box">
+                <h2>Nosso Compromisso com Você</h2>
+                <ul class="manifesto-list">
+                    <li>
+                        <span class="manifesto-icon">✨</span>
+                        <div>
+                            <strong>Zero Julgamento:</strong> Aqui não existe "mãe perfeita". Existe rede de apoio real.
+                        </div>
+                    </li>
+                    <li>
+                        <span class="manifesto-icon">🛡️</span>
+                        <div>
+                            <strong>No Seu Ritmo:</strong> Sem prazos sufocantes. Sabemos que imprevistos com os filhos acontecem.
+                        </div>
+                    </li>
+                    <li>
+                        <span class="manifesto-icon">🎯</span>
+                        <div>
+                            <strong>Foco no Bolso e na Alma:</strong> O desenvolvimento profissional caminha junto com a sua saúde mental.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / CTA FINAL -->
+    <footer>
+        <div class="container footer-container">
+            <h2>A maternidade expandiu a sua força, ela não a apagou.</h2>
+            <p>Você não precisa caminhar sozinha. Estamos prontas para te acolher.</p>
+            <a href="#diagnostico" class="btn btn-primary-light">Entrar para o Grupo Secreto de Acolhimento</a>
+        </div>
+    </footer>
+
+    <!-- SCRIPT INTERATIVO -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,22 +1,29 @@
-# Projeto Renascer Profissional 🌸
+# Projeto: Mães Solo - Ecossistema de Resgate Profissional
 
-Plataforma web desenvolvida com foco em acolhimento, orientação e resgate de autonomia profissional para mães solo. O projeto une design humanizado (UI/UX) com interatividade para engajar e conscientizar o público-alvo.
+## O Manifesto
+Muitas vezes, a maternidade solo é romantizada ou, inversamente, tratada como um "problema" para a carreira. Este projeto nasce para romper esse ciclo. Acreditamos que **a maternidade não apaga a sua força profissional; ela a transforma em uma competência de gestão de alta performance.**
 
-## 🚀 Tecnologias Utilizadas
-O projeto foi construído seguindo boas práticas de separação de responsabilidades e desenvolvimento front-end:
-* **HTML5:** Estruturação semântica e limpa do conteúdo.
-* **CSS3:** Estilização modular com design system próprio (efeito glassmorphism/vidro fosco, cards em relevo, paleta de cores acolhedora) e **Media Queries** para responsividade mobile completa.
-* **JavaScript (ES6+):** Manipulação dinâmica do DOM e eventos para o sistema de quiz interativo e direcionamento em tempo real.
+Nosso objetivo não é oferecer "dicas de produtividade", mas criar um **espaço seguro** onde mulheres possam:
+1. **Descomprimir:** Organizar a carga mental.
+2. **Reenquadrar:** Traduzir a experiência da maternidade como *Soft Skills* valiosas.
+3. **Reconectar:** Retomar o protagonismo da própria carreira, sem abrir mão do que é essencial.
 
-## 💡 Funcionalidades
-* **Mural Espiritual e Acolhimento:** Seção visual em destaque com imagem temática de pôr do sol e card transparente para mensagem bíblica motivacional (Salmos 27:1).
-* **Seção de Identificação de Dores:** Validação empática dos desafios enfrentados na rotina de maternidade e carreira.
-* **Quiz Interativo de Autoavaliação:** Ferramenta dinâmica onde a usuária clica em seu principal desafio atual e recebe um direcionamento acolhedor personalizado instantaneamente.
-* **Design System Consistente:** Componentes padronizados em formato de cartões com bordas de destaque, sombras suaves e interatividade.
+## O Diferencial de Mercado
+Diferente de plataformas convencionais de recolocação, nós focamos na **identidade antes do cargo**. 
+* **Diagnóstico Intuitivo:** A página não apenas fala, ela ouve. Através de interações simples, a usuária recebe um direcionamento personalizado baseado no seu nível atual de sobrecarga.
+* **Foco em Competências Reais:** Não escondemos a maternidade no currículo; nós a elevamos ao nível de "Gestão Estratégica e Resiliência".
 
-## 🌐 Acesso Online
-Você pode acessar o projeto rodando ao vivo no link abaixo:
-👉 [Clique aqui para acessar o site](https://seu-usuario.github.io/nome-do-repositorio/)
+## Tecnologias Utilizadas
+* **HTML5:** Estrutura semântica focada em acessibilidade e leitura fluida.
+* **CSS3:** Design responsivo com paleta de cores acolhedoras (tons terrosos e verde-oliva) para transmitir profissionalismo e calma.
+* **JavaScript (Vanilla):** Lógica interativa para o diagnóstico de perfil, sem dependências pesadas, garantindo velocidade de carregamento.
 
----
-Desenvolvido como parte de projeto prático de desenvolvimento web e frontend.
+## Estrutura do Projeto
+- `index.html`: Interface principal focada em conversão emocional.
+- `style.css`: Estilização baseada em princípios de UX/UI para reduzir a ansiedade da usuária.
+- `script.js`: Lógica de diagnóstico rápido para engajamento imediato.
+
+## Como rodar o projeto
+1. Clone este repositório:
+   ```bash
+   git clone [link-do-seu-repositorio]
